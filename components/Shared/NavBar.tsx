@@ -27,16 +27,15 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="text-white hover:bg-yellow-50 hover:text-black hover:rounded-sm">
-              <Link href="#projects">
-                <a>Projects</a>
-              </Link>
-            </li>
-            <li className="text-white hover:bg-yellow-50 hover:text-black hover:rounded-sm">
               <Link href="#tech">
                 <a>Technologies</a>
               </Link>
             </li>
-
+            <li className="text-white hover:bg-yellow-50 hover:text-black hover:rounded-sm">
+              <Link href="#projects">
+                <a>Projects</a>
+              </Link>
+            </li>
             <li className="text-white hover:bg-yellow-50 hover:text-black hover:rounded-sm">
               <Link href="#contact">
                 <a>Contact</a>

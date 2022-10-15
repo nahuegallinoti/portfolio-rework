@@ -1,7 +1,7 @@
 import React from "react";
 import Context from "./Context";
 
-import { projects, timeLine, technologies } from "../constants/Constants.ts";
+import { projects, timeLine, technologies } from "../constants/Constants";
 
 import { IContext } from "./IContext";
 

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import AboutMe from "../components/AboutMe/AboutMe";
-import Divider from "../components/Shared/Divider";
+import Contact from "../components/Contact/Contact";
+import Projects from "../components/Projects/Projects";
 import Technologies from "../components/Technologies/Technologies";
 import Welcome from "../components/Welcome/Welcome";
 import Provider from "../context/Provider";
@@ -10,11 +11,15 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   return (
     <Layout>
-      <Welcome greet={`Welcome to my portfolio`} />
-      <Provider>
-        <AboutMe />
-        <Technologies />
-      </Provider>
+      <div className="container">
+        <Welcome greet={`Welcome to my portfolio`} />
+        <Provider>
+          <AboutMe />
+          <Technologies />
+          <Projects />
+        </Provider>
+        <Contact />
+      </div>
     </Layout>
   );
 };

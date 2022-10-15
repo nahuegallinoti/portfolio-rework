@@ -10,7 +10,7 @@ const Carousel = () => {
       {timeLine &&
         timeLine.map((item, index) => (
           <div
-            className="border-2 border-solid border-white rounded-3xl p-6 my-8 cursor-pointer hover:border-cyan-500 max-w-md last:animate-bounce last:border-green-600 last:hover:border-green-400 hover:scale-105"
+            className="border-2 border-solid border-orange-400 rounded-3xl p-6 mt-10 cursor-pointer max-w-md last:animate-bounce last:border-cyan-600 last:hover:border-green-400 hover:scale-105"
             key={index}
           >
             <div className="flex gap-4">

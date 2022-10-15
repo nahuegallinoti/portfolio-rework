@@ -1,3 +1,4 @@
+import { Project, Technology, TimelineItem } from "../types/types";
 import { FaStoreAlt } from "react-icons/fa";
 import { BiLaugh } from "react-icons/bi";
 import { BsFillChatDotsFill } from "react-icons/bs";
@@ -5,8 +6,6 @@ import { BiNews } from "react-icons/bi";
 import { BsPersonBoundingBox } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
 import { GiAirplaneDeparture } from "react-icons/gi";
-import { Project, Technology, TimelineItem } from "../types/types";
-
 export const projects: Project[] = [
   {
     title: "NFT Marketplace",
@@ -16,7 +15,7 @@ export const projects: Project[] = [
     source: "https://github.com/nahuegallinoti/lungo-token-nft",
     visit: "https://google.com",
     id: 0,
-    icon: '<FaStoreAlt size="30%" />',
+    icon: FaStoreAlt,
   },
   {
     title: "Booking System",
@@ -26,7 +25,7 @@ export const projects: Project[] = [
     source: "https://github.com/nahuegallinoti/reservas-app",
     visit: "https://tesis-a16ed.firebaseapp.com/",
     id: 1,
-    icon: '<RiComputerLine size="30%" />',
+    icon: RiComputerLine,
   },
   {
     title: "Booking Portal",
@@ -36,7 +35,7 @@ export const projects: Project[] = [
     source: "https://github.com/nahuegallinoti/portal-reservas",
     visit: "https://portal-reservas.web.app/",
     id: 2,
-    icon: '<GiAirplaneDeparture size="30%" />',
+    icon: GiAirplaneDeparture,
   },
   {
     title: "Giphy App",
@@ -45,7 +44,7 @@ export const projects: Project[] = [
     source: "https://github.com/nahuegallinoti/giphy-react-app",
     visit: "https://giphy-app-react-hooks.herokuapp.com/",
     id: 3,
-    icon: '<BiLaugh size="30%" />',
+    icon: BiLaugh,
   },
   {
     title: "ChatApp",
@@ -54,25 +53,25 @@ export const projects: Project[] = [
     source: "https://github.com/nahuegallinoti/chatApp",
     visit: "https://react-socketio-express-chat.herokuapp.com/",
     id: 4,
-    icon: '<BsFillChatDotsFill size="30%" />',
+    icon: BsFillChatDotsFill,
   },
   {
     title: "Posts App",
     description: "App to make posts",
-    tags: ["React", "Node.js", "Express", "TailwindCss", ""],
+    tags: ["React", "Node.js", "Express", "Tailwind"],
     source: "https://github.com/nahuegallinoti/MERN-stack-posts",
     visit: "https://mern-stack-nagu.herokuapp.com/",
     id: 5,
-    icon: '<BiNews size="30%" />',
+    icon: BiNews,
   },
   {
     title: "Portfolio",
     description: "Personal portfolio website",
-    tags: ["Next.js"],
+    tags: ["Next.js", "Tailwind"],
     source: "https://github.com/nahuegallinoti/portfolio",
     visit: "https://portfolio-nahuel.herokuapp.com/",
     id: 6,
-    icon: '<BsPersonBoundingBox size="30%" />',
+    icon: BsPersonBoundingBox,
   },
 ];
 
@@ -84,7 +83,7 @@ export const timeLine: TimelineItem[] = [
 
 export const technologies: Technology[] = [
   {
-    type: "Frontend",
+    type: "Front-End",
     description: "Beautiful and scalable SPA",
     icon: [
       {
@@ -115,7 +114,7 @@ export const technologies: Technology[] = [
     ],
   },
   {
-    type: "Backend",
+    type: "Back-End",
     description: "API REST and microservices",
     icon: [
       {
@@ -131,11 +130,11 @@ export const technologies: Technology[] = [
     ],
   },
   {
-    type: "Database",
+    type: "Databases",
     description: "Persist and retrieve data",
     icon: [
       {
-        name: "sqlserver",
+        name: "mongo",
         height: 50,
         width: 50,
       },
@@ -145,7 +144,7 @@ export const technologies: Technology[] = [
         width: 50,
       },
       {
-        name: "mongo",
+        name: "sqlserver",
         height: 50,
         width: 50,
       },

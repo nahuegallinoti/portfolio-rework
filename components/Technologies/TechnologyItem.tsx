@@ -9,11 +9,9 @@ type Props = {
 const TechnologyItem = ({ technology }: Props) => {
   return (
     <>
-      <div className="flex flex-col flex-1 items-center justify-between border-2 border-solid border-white rounded-3xl p-6 my-8 cursor-pointer hover:border-cyan-500 gap-3 hover:animate-pulse-fast">
-        <p className="font-extrabold text-2xl text-white mb-4">
-          {technology.type}
-        </p>
-        <p className="text-white">{technology.description}</p>
+      <div className="flex flex-col flex-1 items-center justify-between border-2 border-solid border-y-slate-600 border-x-slate-500 rounded-3xl p-6 my-8 cursor-pointer hover:border-cyan-500 gap-3 hover:animate-pulse-fast max-h-52">
+        <p className="font-extrabold text-2xl text-white">{technology.type}</p>
+        <p className="text-white text-lg mb-4">{technology.description}</p>
         <picture className="flex flex-row gap-4">
           {technology.icon &&
             technology.icon.map((item, index) => (

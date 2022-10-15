@@ -1,9 +1,23 @@
 import React from "react";
 
-const Divider = () => {
+type Props = {
+  width?: string;
+  height?: string;
+  colorFrom?: string;
+  colorVia?: string;
+  colorTo?: string;
+};
+
+const Divider = ({
+  width = "w-full",
+  colorFrom = "from-purple-400",
+  colorTo = "to-orange-400",
+}: Props) => {
   return (
-    <div className="flex columns-1 md:columns-2 max-w-screen-xl my-5">
-      <div className="flex w-full h-2 mb-5 rounded-2xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-cyan-500"></div>
+    <div className={`flex columns-1 md:columns-2 rounded-2xl`}>
+      <div
+        className={`${width} h-2 rounded-2xl bg-gradient-to-r ${colorFrom} ${colorTo}`}
+      ></div>
     </div>
   );
 };
