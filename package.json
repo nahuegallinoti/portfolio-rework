@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm install && next build",
+    "build": "next build",
     "start": "next start -p $PORT",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build"
   },
   "homepage": "https://nahuegallinoti.github.io/portfolio_rework/",
   "dependencies": {
