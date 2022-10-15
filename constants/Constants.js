@@ -6,7 +6,8 @@ import { BiNews } from "react-icons/bi";
 import { BsPersonBoundingBox } from "react-icons/bs";
 import { RiComputerLine } from "react-icons/ri";
 import { GiAirplaneDeparture } from "react-icons/gi";
-export const projects: Project[] = [
+
+export const projects = [
   {
     title: "NFT Marketplace",
     description:
@@ -75,13 +76,13 @@ export const projects: Project[] = [
   },
 ];
 
-export const timeLine: TimelineItem[] = [
+export const timeLine = [
   { year: 2016, text: "QA Functional in IOT Project" },
   { year: 2017, text: "QA Leader for Fintech Project" },
   { year: "2018-Actually", text: "Fullstack Web Developer" },
 ];
 
-export const technologies: Technology[] = [
+export const technologies = [
   {
     type: "Front-End",
     description: "Beautiful and scalable SPA",
