@@ -8,7 +8,7 @@ const BackgroundAnimation = () => (
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g opacity="0.15">
+      <g opacity="0.5">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -233,7 +233,7 @@ const BackgroundAnimation = () => (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(301 301) rotate(90) scale(300)"
         >
-          <stop offset="0.333333" stopColor="#FBFBFB" />
+          <stop offset="0.333333" stopColor="#f8860d" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <radialGradient
@@ -244,7 +244,7 @@ const BackgroundAnimation = () => (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(301 301) rotate(90) scale(300)"
         >
-          <stop offset="0.333333" stopColor="#FBFBFB" />
+          <stop offset="0.333333" stopColor="#ad58ed" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <radialGradient
@@ -255,7 +255,7 @@ const BackgroundAnimation = () => (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(301 301) rotate(90) scale(300)"
         >
-          <stop offset="0.333333" stopColor="#FBFBFB" />
+          <stop offset="0.333333" stopColor="#f19393" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </radialGradient>
         <linearGradient

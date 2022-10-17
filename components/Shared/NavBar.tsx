@@ -38,7 +38,7 @@ const NavBar = () => {
           <div
             className={
               isNavOpen
-                ? "absolute top-0 left-0 bg-hamburger z-10 flex flex-col justify-evenly items-center w-10/12 h-2/3"
+                ? "absolute top-0 left-0 bg-hamburger z-10 flex flex-col justify-evenly items-center w-3/4 h-full"
                 : "hidden"
             }
           >
@@ -64,16 +64,16 @@ const NavBar = () => {
               onClick={() => setIsNavOpen(false)}
               className="flex flex-col items-center justify-between"
             >
-              <li className="border-b border-gray-200 my-8 uppercase hover:text-white">
+              <li className="border-b border-gray-300 my-8 uppercase first-letter:text-2xl text-white">
                 <a href="#about">About</a>
               </li>
-              <li className="border-b border-gray-200 my-8 uppercase">
+              <li className="border-b border-gray-300 my-8 uppercase first-letter:text-2xl text-white">
                 <a href="#tech">Technologies</a>
               </li>
-              <li className="border-b border-gray-200 my-8 uppercase">
+              <li className="border-b border-gray-300 my-8 uppercase first-letter:text-2xl text-white">
                 <a href="#projects">Projects</a>
               </li>
-              <li className="border-b border-gray-200 my-8 uppercase">
+              <li className="border-b border-gray-300 my-8 uppercase first-letter:text-2xl text-white">
                 <a href="#contact">Contact</a>
               </li>
             </ul>

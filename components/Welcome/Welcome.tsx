@@ -12,7 +12,7 @@ const Welcome = ({ greet }: Props) => (
       className="flex flex-col m-8 md:flex-row max-w-screen-xl xl:mx-auto my-10 items-center"
     >
       <article>
-        <p className="text-7xl font-semibold  bg-gradient-to-r from-zinc-100 via-zinc-400 to-zinc-500 bg-clip-text text-transparent">
+        <p className="text-7xl font-semibold bg-gradient-to-r from-zinc-100 via-zinc-400 to-zinc-500 bg-clip-text text-transparent">
           {greet}
         </p>
       </article>
