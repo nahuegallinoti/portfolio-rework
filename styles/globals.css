@@ -55,3 +55,7 @@ li {
   transform-origin: left;
   transform: perspective(2000px) rotateY(90deg) rotateX(90deg) rotateZ(-190deg);
 }
+
+.details:hover {
+  transform: rotateY(0deg);
+}

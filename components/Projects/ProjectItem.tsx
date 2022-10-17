@@ -27,10 +27,14 @@ const ProjectItem = ({ project }: Props) => {
       </div>
       <div className="flex overflow-auto mt-12 mx-auto gap-10 text-white">
         <button className="bg-slate-500 rounded-xl px-4 py-2">
-          <a href={project.visit}>Live</a>
+          <a href={project.visit} target="_blank" rel="noopener noreferrer">
+            Live
+          </a>
         </button>
         <button className="bg-slate-500 rounded-xl px-4 py-2">
-          <a href={project.source}>Code</a>
+          <a href={project.source} target="_blank" rel="noopener noreferrer">
+            Code
+          </a>
         </button>
       </div>
       <div className="m-2 p-4 overflow-auto details rounded-lg bg-gray-800/50 w-fit">

@@ -13,6 +13,7 @@ module.exports = {
         primary: "#0f1624",
         projectTitle: "#9cc9e3",
         projectBackground: "#3c3a4433",
+        hamburger: "#3C4048"
       },
       gridTemplateColumns: {
         'nav': '1fr 10fr 0.5fr',

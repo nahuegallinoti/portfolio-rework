@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import LayoutSection from "../Shared/LayoutSection";
 
@@ -17,15 +18,15 @@ const Contact = () => {
     //transforma elementos del form en objeto json
     const objectData = Object.fromEntries(formData);
 
-    fetch("http://localhost:3000/api/contact/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(objectData),
-    })
+    axios
+      .post("http://localhost:3000/api/contact/contact", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: objectData,
+      })
       .then(async (res) => {
-        console.log(await res.json());
+        console.log(await res.data);
       })
       .catch((err) => console.log(err));
   };
