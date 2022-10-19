@@ -17,7 +17,7 @@ const Welcome = ({ greet }: Props) => (
         </p>
       </article>
 
-      <article className="h-1/2 w-1/2 mt-4">
+      <article className="h-1/2 w-1/2 mt-4 animate-pulse-fast">
         <BackgroundAnimation />
       </article>
     </section>

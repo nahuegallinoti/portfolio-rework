@@ -23,7 +23,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "constants/Constants.js"
+    "constants/Constants.js",
+    "data/contact.ts"
   ],
   "exclude": [
     "node_modules"

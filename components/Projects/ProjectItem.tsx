@@ -1,6 +1,7 @@
 import React from "react";
 import { Project } from "../../types/types";
 import Divider from "../Shared/Divider";
+import CollapsedMenu from "./CollapsedMenu";
 
 type Props = {
   project: Project;
@@ -26,30 +27,19 @@ const ProjectItem = ({ project }: Props) => {
         </span>
       </div>
       <div className="flex overflow-auto mt-12 mx-auto gap-10 text-white">
-        <button className="bg-slate-500 rounded-xl px-4 py-2">
+        <button className="bg-slate-500 rounded-xl px-4 py-2 hover:bg-white hover:text-black hover:font-bold">
           <a href={project.visit} target="_blank" rel="noopener noreferrer">
             Live
           </a>
         </button>
-        <button className="bg-slate-500 rounded-xl px-4 py-2">
+        <button className="bg-slate-500 rounded-xl px-4 py-2 hover:bg-white hover:text-black hover:font-bold">
           <a href={project.source} target="_blank" rel="noopener noreferrer">
             Code
           </a>
         </button>
       </div>
-      <div className="m-2 p-4 overflow-auto details rounded-lg bg-gray-800/50 w-fit">
-        <div>
-          <ul>
-            {project.tags.map((tag, i) => (
-              <li
-                className="tracking-wider text-red-200 hover:font-bold hover:text-white rounded-lg hover:bg-red-900 px-4 hover:cursor-default"
-                key={i}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="mb-4 p-4 overflow-auto details rounded-lg bg-gray-800/50 w-fit hover:bg-slate-500">
+        <CollapsedMenu tags={project.tags} />
       </div>
     </article>
   );

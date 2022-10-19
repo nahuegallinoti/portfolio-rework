@@ -1,6 +1,8 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import LayoutSection from "../Shared/LayoutSection";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   //declaramos el email como un state porque queremos controlar el input
@@ -19,16 +21,35 @@ const Contact = () => {
     const objectData = Object.fromEntries(formData);
 
     axios
-      .post("http://localhost:3000/api/contact/contact", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: objectData,
-      })
+      .post("http://localhost:3000/api/contact/contact", objectData)
       .then(async (res) => {
+        toast("✅ Email Sent!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+
         console.log(await res.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        toast("❌ Email Fail!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+
+        console.log(err);
+      });
   };
 
   return (
@@ -44,16 +65,16 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="firstName"
-                className="block font-medium text-white text-xl"
+                className="font-medium text-white text-xl"
               >
                 First Name
               </label>
-              <div className="mt-1 flex flex-col items-center">
+              <div className="mt-1">
                 <input
                   type="text"
                   name="firstName"
                   id="firstName"
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md h-8 w-72"
+                  className="placeholder: p-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md h-8 w-72"
                   placeholder="Adriano"
                 />
               </div>
@@ -61,32 +82,29 @@ const Contact = () => {
             <div className="mt-5">
               <label
                 htmlFor="lastName"
-                className="block font-medium text-white text-xl"
+                className="font-medium text-white text-xl"
               >
                 Last Name
               </label>
-              <div className="mt-1 flex flex-col items-center">
+              <div className="mt-1">
                 <input
                   type="text"
                   name="lastName"
                   id="lastName"
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md h-8 w-72"
+                  className="placeholder: p-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md h-8 w-72"
                   placeholder="Cervera"
                 />
               </div>
             </div>
             <div className="mt-5">
-              <label
-                htmlFor="email"
-                className="block text-white text-xl font-medium"
-              >
+              <label htmlFor="email" className="text-white text-xl font-medium">
                 Email
               </label>
-              <div className="mt-1 flex flex-col items-center">
+              <div className="mt-1">
                 <input
                   type="email"
                   id="email"
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md h-8 w-72"
+                  className="placeholder: p-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md h-8 w-72"
                   placeholder="adri.cervera@gmail.com"
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -95,16 +113,16 @@ const Contact = () => {
             <div className="mt-5">
               <label
                 htmlFor="message"
-                className="block text-white text-xl font-medium "
+                className=" text-white text-xl font-medium "
               >
                 Message
               </label>
-              <div className="mt-1 flex flex-col items-center">
+              <div className="mt-1">
                 <textarea
                   id="message"
                   name="message"
                   rows={3}
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md h-8 w-72"
+                  className="placeholder: p-1 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md h-8 w-72"
                   defaultValue={""}
                 />
               </div>
@@ -119,6 +137,18 @@ const Contact = () => {
             </div>
           </form>
         </div>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
       </article>
     </LayoutSection>
   );

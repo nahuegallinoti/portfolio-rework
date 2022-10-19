@@ -12,7 +12,8 @@
   caret-color: rgba(0, 0, 0, 0);
 }
 
-input {
+input,
+textarea {
   caret-color: rgb(220, 48, 5);
   outline: none;
 }
@@ -51,6 +52,8 @@ li {
 }
 
 .details {
+  border-top: 2px dashed rgb(255, 255, 255);
+  border-right: 2px dashed rgb(255, 255, 255);
   transition: 0.5s;
   transform-origin: left;
   transform: perspective(2000px) rotateY(90deg) rotateX(90deg) rotateZ(-190deg);
