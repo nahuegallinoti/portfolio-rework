@@ -47,13 +47,13 @@ handler.post<NextApiRequest, NextApiResponse>(async (req, res, next) => {
         
       `,
     });
+
+    contacts.push(contact);
+    res.status(200).json({ data: contact });
   } catch (error: any) {
     res.status(500);
     next(new Error(`${error}`));
   }
-
-  contacts.push(contact);
-  res.status(200).json({ data: contact });
 });
 
 handler.patch<NextApiRequest, NextApiResponse>(async (req, res, next) => {

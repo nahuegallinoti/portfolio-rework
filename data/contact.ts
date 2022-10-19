@@ -1,5 +1,3 @@
-import { ContactMessage } from "../types/contactMessage";
-
 export const contacts = [
   {
     id: "1",

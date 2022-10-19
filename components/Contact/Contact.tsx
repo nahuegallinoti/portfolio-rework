@@ -22,7 +22,7 @@ const Contact = () => {
 
     axios
       .post("http://localhost:3000/api/contact/contact", objectData)
-      .then(async (res) => {
+      .then((res) => {
         toast("✅ Email Sent!", {
           position: "top-right",
           autoClose: 3000,
@@ -34,7 +34,7 @@ const Contact = () => {
           theme: "light",
         });
 
-        console.log(await res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         toast("❌ Email Fail!", {
