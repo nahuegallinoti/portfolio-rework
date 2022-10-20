@@ -1,9 +1,9 @@
 import React from "react";
-import { Technology } from "../../types/types";
 import Image from "next/image";
+import { ITechnology } from "../../interfaces/ITechnology";
 
 type Props = {
-  technology: Technology;
+  technology: ITechnology;
 };
 
 const TechnologyItem = ({ technology }: Props) => {
