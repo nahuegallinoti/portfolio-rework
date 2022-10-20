@@ -37,8 +37,8 @@ const ProjectItem = ({ project, detail = false }: Props) => {
       </div>
       <div className="flex my-5 mx-auto">
         {detail ? (
-          <Link href="/">
-            <a className="text-white hover:text-slate-500">Back</a>
+          <Link href="/#projects">
+            <a className="text-white hover:text-slate-500">Back to Projects</a>
           </Link>
         ) : (
           <Link href={`/projects/${project.id}`}>
