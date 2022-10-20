@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import nc from "next-connect";
 import cors from "cors";
 import { v4 as uuidv4 } from "uuid";
-import { ContactMessage } from "../../../types/contactMessage";
+import { ContactMessage } from "../../../types/contactMessage.type";
 import { contacts } from "../../../data/contact";
 import nodemailer from "nodemailer";
 

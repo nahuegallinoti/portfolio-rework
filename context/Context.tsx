@@ -1,6 +1,12 @@
 import { createContext } from "react";
-import { IContext } from "./IContext";
+import { IContext } from "../types/context.type";
 
-const AppCtx = createContext<IContext | null>(null);
+const initialState: IContext = {
+  projects: [],
+  timeLine: [],
+  technologies: [],
+};
+
+const AppCtx = createContext<IContext>(initialState);
 
 export default AppCtx;

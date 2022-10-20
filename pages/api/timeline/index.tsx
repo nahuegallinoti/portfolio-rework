@@ -1,16 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nc from "next-connect";
 import cors from "cors";
-import { projects } from "../../../constants/Constants";
-
-const getProject = (id: string) => projects.find((c) => c.id.toString() === id);
+import { timeline } from "../../../data/timeline";
 
 const handler = nc<NextApiRequest, NextApiResponse>({ onError, onNoMatch }).use(
   cors()
 );
 
 handler.get<NextApiRequest, NextApiResponse>(async (req, res) => {
-  res.status(200).json({ data: projects });
+  res.status(200).json(timeline);
 });
 
 function onError(

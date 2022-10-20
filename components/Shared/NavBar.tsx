@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { DiCodepen } from "react-icons/di";
 
 import React, { useState } from "react";
+import SocialIcons from "./SocialIcons";
 
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -104,20 +104,8 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div>
-          <ul className="flex justify-around text-xl">
-            <li className="text-white hover:bg-yellow-50 hover:text-black hover:rounded-sm">
-              <a href="https://github.com/nahuegallinoti">
-                <AiFillGithub size="2rem"></AiFillGithub>
-              </a>
-            </li>
-            <li className="text-white hover:bg-yellow-50 hover:text-blue-600 hover:rounded-sm">
-              <a href="https://www.linkedin.com/in/nahuel-gallinoti-1b482213a/">
-                <AiFillLinkedin size="2rem"></AiFillLinkedin>
-              </a>
-            </li>
-          </ul>
-        </div>
+
+        <SocialIcons />
       </nav>
     </>
   );

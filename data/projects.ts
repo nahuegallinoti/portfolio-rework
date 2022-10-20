@@ -1,6 +1,6 @@
-import { Project, Technology, TimelineItem } from "../types/types";
+import { IProject } from "../interfaces/IProject";
 
-export const projects = [
+export const projects: IProject[] = [
   {
     title: "NFT Marketplace",
     description:
@@ -59,82 +59,5 @@ export const projects = [
     source: "https://github.com/nahuegallinoti/portfolio-rework",
     visit: "https://portfolio-rework-rouge.vercel.app/",
     id: 6,
-  },
-];
-
-export const timeLine = [
-  { year: 2016, text: "QA Functional in IOT Project" },
-  { year: 2017, text: "QA Leader for Fintech Project" },
-  { year: "2018-Actually", text: "Fullstack Web Developer" },
-];
-
-export const technologies = [
-  {
-    type: "Front-End",
-    description: "Beautiful and scalable SPA",
-    icon: [
-      {
-        name: "html",
-        height: 50,
-        width: 50,
-      },
-      {
-        name: "css",
-        height: 50,
-        width: 50,
-      },
-      {
-        name: "js",
-        height: 10,
-        width: 40,
-      },
-      {
-        name: "react",
-        height: 10,
-        width: 40,
-      },
-      {
-        name: "angular",
-        height: 10,
-        width: 40,
-      },
-    ],
-  },
-  {
-    type: "Back-End",
-    description: "API REST and microservices",
-    icon: [
-      {
-        name: "node",
-        height: 35,
-        width: 35,
-      },
-      {
-        name: "csharp",
-        height: 50,
-        width: 50,
-      },
-    ],
-  },
-  {
-    type: "Databases",
-    description: "Persist and retrieve data",
-    icon: [
-      {
-        name: "mongo",
-        height: 50,
-        width: 50,
-      },
-      {
-        name: "mysql",
-        height: 50,
-        width: 50,
-      },
-      {
-        name: "sqlserver",
-        height: 50,
-        width: 50,
-      },
-    ],
   },
 ];

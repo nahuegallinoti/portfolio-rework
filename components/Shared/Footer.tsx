@@ -1,10 +1,11 @@
 import React from "react";
+import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Footer</h1>
-    </div>
+    <section className="flex justify-center items-center bg-navColor h-16">
+      <SocialIcons />
+    </section>
   );
 };
 

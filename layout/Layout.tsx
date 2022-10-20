@@ -13,7 +13,7 @@ const Layout = ({ children }: Props) => {
       <Header />
       <NavBar />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
