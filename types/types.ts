@@ -1,6 +1,3 @@
-import React from "react";
-import { IconType } from "react-icons/lib";
-
 export type Project = {
   id: number;
   title: string;
@@ -8,7 +5,6 @@ export type Project = {
   tags: string[];
   source: string;
   visit: string;
-  icon: any;
 };
 
 export type TimelineItem = {

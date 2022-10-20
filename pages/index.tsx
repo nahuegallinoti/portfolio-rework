@@ -6,7 +6,6 @@ import Technologies from "../components/Technologies/Technologies";
 import Welcome from "../components/Welcome/Welcome";
 import Provider from "../context/Provider";
 import Layout from "../layout/Layout";
-import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
