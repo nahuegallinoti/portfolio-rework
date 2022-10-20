@@ -6,7 +6,7 @@ import CollapsedMenu from "./CollapsedMenu";
 
 type Props = {
   project: Project;
-  detail: boolean;
+  detail?: boolean;
 };
 
 const ProjectItem = ({ project, detail = false }: Props) => {
