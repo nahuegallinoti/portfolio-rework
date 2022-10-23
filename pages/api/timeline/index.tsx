@@ -2,14 +2,17 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import nc from "next-connect";
 import cors from "cors";
 import { timeline } from "../../../data/timeline";
+import { ITimelineItem } from "../../../interfaces/ITimelineItem";
 
 const handler = nc<NextApiRequest, NextApiResponse>({ onError, onNoMatch }).use(
   cors()
 );
 
-handler.get<NextApiRequest, NextApiResponse>(async (req, res) => {
-  res.status(200).json(timeline);
-});
+handler.get<NextApiRequest, NextApiResponse>(
+  async (req: NextApiRequest, res: NextApiResponse<ITimelineItem[]>) => {
+    res.status(200).json(timeline);
+  }
+);
 
 function onError(
   err: Error,

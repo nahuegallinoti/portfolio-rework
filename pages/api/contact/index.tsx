@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
 import nc from "next-connect";
 import cors from "cors";
 import { v4 as uuidv4 } from "uuid";
@@ -12,49 +12,53 @@ const handler = nc<NextApiRequest, NextApiResponse>({ onError, onNoMatch }).use(
   cors()
 );
 
-handler.get<NextApiRequest, NextApiResponse>(async (req, res) => {
-  res.status(200).json({ data: contacts });
-});
+handler.get<NextApiRequest, NextApiResponse>(
+  async (req: NextApiRequest, res: NextApiResponse) => {
+    res.status(200).json({ data: contacts });
+  }
+);
 
-handler.post<NextApiRequest, NextApiResponse>(async (req, res, next) => {
-  const { firstName, lastName, email, message } = req.body;
+handler.post<NextApiRequest, NextApiResponse>(
+  async (req: NextApiRequest, res: NextApiResponse, next) => {
+    const { firstName, lastName, email, message } = req.body;
 
-  const contact: ContactMessage = {
-    id: uuidv4(),
-    firstName,
-    lastName,
-    email,
-    message,
-  };
+    const contact: ContactMessage = {
+      id: uuidv4(),
+      firstName,
+      lastName,
+      email,
+      message,
+    };
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
-    },
-  });
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD,
+      },
+    });
 
-  try {
-    await transporter.sendMail({
-      from: email,
-      to: "nahuegallinoti@gmail.com",
-      subject: `Portfolio: Contact from ${firstName} ${lastName}`,
-      html: `<p>${message}</p><br>
+    try {
+      await transporter.sendMail({
+        from: email,
+        to: "nahuegallinoti@gmail.com",
+        subject: `Portfolio: Contact from ${firstName} ${lastName}`,
+        html: `<p>${message}</p><br>
       <p><strong>Email: </strong> ${email}</p><br>
         
       `,
-    });
+      });
 
-    contacts.push(contact);
-    res.status(200).json({ data: contact });
-  } catch (error: any) {
-    res.status(500);
-    next(new Error(`${error}`));
+      contacts.push(contact);
+      res.status(200).json({ data: contact });
+    } catch (error: any) {
+      res.status(500);
+      next(new Error(`${error}`));
+    }
   }
-});
+);
 
 handler.patch<NextApiRequest, NextApiResponse>(async (req, res, next) => {
   const { id, ...data } = req.body;

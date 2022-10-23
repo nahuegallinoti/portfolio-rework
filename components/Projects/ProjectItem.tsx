@@ -13,7 +13,7 @@ const ProjectItem = ({ project, detail = false }: Props) => {
   return (
     <article
       className={`grid grid-rows-cardProject gap-4 py-2 rounded-lg shadow-[inset_2px_2px_10px_1px_#ffffff54] border-white/60 border-y-4 border-x-2 card items-center bg-projectBackground ${
-        detail && "w-1/3"
+        detail && "min-h-fit"
       }`}
     >
       <div className="mx-auto">

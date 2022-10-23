@@ -3,9 +3,9 @@ import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
   return (
-    <section className="flex justify-center items-center bg-navColor h-16">
+    <footer className="flex justify-center items-center bg-navColor h-16">
       <SocialIcons />
-    </section>
+    </footer>
   );
 };
 

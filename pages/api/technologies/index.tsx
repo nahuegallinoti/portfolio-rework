@@ -2,14 +2,17 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import nc from "next-connect";
 import cors from "cors";
 import { technologies } from "../../../data/technologies";
+import { ITechnology } from "../../../interfaces/ITechnology";
 
 const handler = nc<NextApiRequest, NextApiResponse>({ onError, onNoMatch }).use(
   cors()
 );
 
-handler.get<NextApiRequest, NextApiResponse>(async (req, res) => {
-  res.status(200).json(technologies);
-});
+handler.get<NextApiRequest, NextApiResponse>(
+  async (req: NextApiRequest, res: NextApiResponse<ITechnology[]>) => {
+    res.status(200).json(technologies);
+  }
+);
 
 function onError(
   err: Error,
