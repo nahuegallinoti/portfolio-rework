@@ -21,7 +21,7 @@ const Contact = () => {
     const objectData = Object.fromEntries(formData);
 
     axios
-      .post("http://localhost:3000/api/contact/contact", objectData)
+      .post("http://localhost:3000/api/contact", objectData)
       .then((res) => {
         toast("✅ Email Sent!", {
           position: "top-right",

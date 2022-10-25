@@ -24,7 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     "constants/Constants.js",
-    "data/contact.ts"
+    "data/contact.ts",
+    "jest.config.js",
   ],
   "exclude": [
     "node_modules"

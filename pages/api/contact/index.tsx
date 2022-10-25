@@ -4,7 +4,7 @@ import cors from "cors";
 import { v4 as uuidv4 } from "uuid";
 import { ContactMessage } from "../../../types/contactMessage.type";
 import { contacts } from "../../../data/contact";
-import nodemailer from "nodemailer";
+import sgMail from "@sendgrid/mail";
 
 const getContact = (id: string) => contacts.find((c) => c.id === id);
 
@@ -20,6 +20,8 @@ handler.get<NextApiRequest, NextApiResponse>(
 
 handler.post<NextApiRequest, NextApiResponse>(
   async (req: NextApiRequest, res: NextApiResponse, next) => {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
+
     const { firstName, lastName, email, message } = req.body;
 
     const contact: ContactMessage = {
@@ -30,29 +32,26 @@ handler.post<NextApiRequest, NextApiResponse>(
       message,
     };
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD,
-      },
-    });
+    const msg = {
+      to: "nahuegallinoti@gmail.com",
+      from: "nahuegallinoti@gmail.com",
+      subject: `Portfolio: Contact from ${firstName} ${lastName}`,
+      html: `<p>${message}</p><strong>Email: ${email}</strong>     
+    `,
+    };
 
     try {
-      await transporter.sendMail({
-        from: email,
-        to: "nahuegallinoti@gmail.com",
-        subject: `Portfolio: Contact from ${firstName} ${lastName}`,
-        html: `<p>${message}</p><br>
-      <p><strong>Email: </strong> ${email}</p><br>
-        
-      `,
-      });
-
-      contacts.push(contact);
-      res.status(200).json({ data: contact });
+      sgMail.send(msg).then(
+        (response) => {
+          console.log(response);
+          contacts.push(contact);
+          res.status(200).json({ data: contact });
+        },
+        (error) => {
+          console.error(error);
+          next(error);
+        }
+      );
     } catch (error: any) {
       res.status(500);
       next(new Error(`${error}`));
