@@ -8,7 +8,7 @@ export const projects: IProject[] = [
       "Landing page for a audiovisual production company",
     tags: ["Next 13", "Tailwind"],
     source: "https://github.com/nahuegallinoti/output-club",
-    visit: "https://output-club-f923m7z6d-nahuegallinoti.vercel.app/",
+    visit: "https://output-club.vercel.app/",
     id: 0,
   },
   {
