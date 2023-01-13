@@ -10,7 +10,7 @@ import Layout from "../layout/Layout";
 const Home: NextPage = () => {
   return (
     <Layout>
-      <div className="container">
+      <div className="w-3/4 justify-center items-center mx-auto">
         <Welcome greet={`Welcome to my portfolio`} />
         <Provider>
           <AboutMe />

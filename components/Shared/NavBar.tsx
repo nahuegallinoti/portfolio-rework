@@ -70,7 +70,7 @@ const NavBar = () => {
         {/* Full menu */}
         <div className="hidden lg:flex">
           <Link href="/">
-            <a className="flex text-xl items-center text-white">
+            <a className="flex text-md items-center text-white">
               <DiCodepen size="2rem"></DiCodepen>
               <div>
                 <span>Nahuel Dev</span>
@@ -81,7 +81,7 @@ const NavBar = () => {
 
         {/* Menu options */}
         <div>
-          <ul className="hidden lg:flex justify-around text-xl">
+          <ul className="hidden lg:flex justify-around text-lg">
             <li className="text-white hover:bg-yellow-50 hover:text-black hover:rounded-sm p-1">
               <Link href="#about">
                 <a>About</a>
