@@ -70,10 +70,10 @@ const NavBar = () => {
         {/* Full menu */}
         <div className="hidden lg:flex">
           <Link href="/">
-            <a className="flex text-lg items-center text-white">
-              <DiCodepen size="1.5rem"></DiCodepen>
-              <div className="writer">
-                <span className="writer-text mt-2">Nahuel Dev</span>
+            <a className="flex text-md items-center text-white">
+              <DiCodepen size="2rem"></DiCodepen>
+              <div>
+                <span>Nahuel Dev</span>
               </div>
             </a>
           </Link>

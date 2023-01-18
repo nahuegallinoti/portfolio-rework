@@ -59,24 +59,3 @@ li {
 .details:hover {
   transform: rotateY(0deg);
 }
-
-.writer {
-  display: inline-block;
-  }
-  .writer-text {
-      display: inline-block;
-      overflow: hidden;
-      letter-spacing: 2px;
-      animation: typing 3s steps(9, end);
-      white-space: nowrap;
-      font-weight: 200;      
-  }
-
-  @keyframes typing {
-      from { 
-          width: 0% 
-      }
-      to { 
-          width: 100% 
-      }
-  }

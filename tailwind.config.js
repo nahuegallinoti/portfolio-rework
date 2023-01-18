@@ -22,7 +22,7 @@ module.exports = {
         'cardProject': '15% auto 30% 10% 1fr',
       },
       animation: {
-        'pulse-fast': 'pulseFast 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',        
+        'pulse-fast': 'pulseFast 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         pulseFast: {
