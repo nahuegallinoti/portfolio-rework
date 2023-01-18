@@ -6,7 +6,7 @@ import SocialIcons from "./SocialIcons";
 
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const genericHamburgerLine = `block h-1 w-8 my-1 rounded-full duration-500 bg-gray-500`;
+  const genericHamburgerLine = `block h-1 w-8 my-1 rounded-full duration-500 bg-white/90`;
 
   return (
     <>
@@ -43,7 +43,7 @@ const NavBar = () => {
           <div
             className={
               isNavOpen
-                ? "absolute top-0 left-0 bg-hamburger flex flex-col justify-evenly items-center w-3/4 h-full"
+                ? "fixed top-0 left-0 bg-hamburger flex flex-col justify-evenly w-full h-full"
                 : "hidden"
             }
           >
@@ -70,10 +70,10 @@ const NavBar = () => {
         {/* Full menu */}
         <div className="hidden lg:flex">
           <Link href="/">
-            <a className="flex text-md items-center text-white">
-              <DiCodepen size="2rem"></DiCodepen>
-              <div>
-                <span>Nahuel Dev</span>
+            <a className="flex text-lg items-center text-white">
+              <DiCodepen size="1.5rem"></DiCodepen>
+              <div className="writer">
+                <span className="writer-text mt-2">Nahuel Dev</span>
               </div>
             </a>
           </Link>

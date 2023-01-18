@@ -19,7 +19,7 @@ const LayoutSection = ({
   return (
     <section id={`${id}`} className={`mx-8 ${sectionClass}`}>
       <article className={`my-4 ${titleClass}`}>
-        <p className="text-6xl font-semibold text-white">{title}</p>
+        <p className="text-4xl font-semibold text-white">{title}</p>
       </article>
       <Divider />
       {children}

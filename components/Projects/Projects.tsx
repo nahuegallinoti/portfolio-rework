@@ -17,7 +17,7 @@ const Projects = () => {
           </p>
         </div>
       ) : (
-        <section className="grid xs:max-w-md md:grid-cols-2 gap-10 mt-16">
+        <section className="grid xs:max-w-md md:grid-cols-2 gap-20 mt-16">
           {projects.map((item, index) => (
             <ProjectItem key={index} project={item} />
           ))}
