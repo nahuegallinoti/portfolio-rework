@@ -21,7 +21,7 @@ export const projects: IProject[] = [
     title: "Wallet Generator",
     description:
       "Web application to generate a wallet and sign transactions for transfering funds",
-    tags: ["React, Tailwind, Express, Cryptography"],
+    tags: ["React", "Tailwind", "Express", "Cryptography"],
     source:
       "https://github.com/nahuegallinoti/alchemy-bootcamp/tree/main/Week%201%20-%20Digital%20Signatures/sign-transaction-pubk",
     visit: "https://alchemy-bootcamp.vercel.app/",
