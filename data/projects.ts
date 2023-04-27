@@ -67,8 +67,8 @@ export const projects: IProject[] = [
     description:
       "Portal for booking hotel rooms with a simple and intuitive interface",
     tags: ["Angular 11", "Angular Material", "Firebase"],
-    source: "https://github.com/nahuegallinoti/portfolio-rework",
-    visit: "https://portfolio-rework-rouge.vercel.app/",
+    source: "https://github.com/nahuegallinoti/portal-reservas",
+    visit: "https://portal-reservas.web.app",
     id: 7,
   },
 ];
