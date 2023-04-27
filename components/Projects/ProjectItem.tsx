@@ -51,7 +51,7 @@ const ProjectItem = ({ project, detail = false }: Props) => {
           </Link>
         )}
       </div>
-      <div className="flex mb-10 p-1 overflow-auto details rounded-lg bg-gray-800/50 w-fit hover:bg-slate-500">
+      <div className="flex mb-10 py-1 ml-px overflow-auto details rounded-lg bg-gray-800/50 w-fit hover:bg-slate-500">
         <CollapsedMenu tags={project.tags} />
       </div>
     </article>
