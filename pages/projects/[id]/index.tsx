@@ -9,8 +9,10 @@ import { GetStaticPaths, GetStaticProps } from "next";
 export default function ProjectDetail({ project }: any) {
   return (
     <>
-      <div className="flex items-center justify-center mt-16 relative p-10">
-        {<ProjectItem project={project} detail={true} />}
+      <div className="min-h-screen flex items-center justify-center p-8">
+        <div className="w-full max-w-2xl">
+          <ProjectItem project={project} detail={true} />
+        </div>
       </div>
     </>
   );
